@@ -1,12 +1,11 @@
 source "https://rubygems.org"
-
+gem 'bcrypt', '~> 3.1.16'
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
 
 # A fast and simple web server
 # https://github.com/macournoyer/thin
-gem "thin", "~> 1.8"
 
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
@@ -40,7 +39,9 @@ group :development do
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
-  gem "rerun"
+  gem 'rerun', '~> 0.14.0'
+gem 'thin', '~> 1.8', '>= 1.8.2'
+gem 'puma', '~> 6.2', '>= 6.2.2'
 end
 
 # These gems will only be used when we are running tests

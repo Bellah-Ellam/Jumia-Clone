@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_05_201049) do
+ActiveRecord::Schema.define(version: 2023_06_06_173109) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -26,13 +26,16 @@ ActiveRecord::Schema.define(version: 2023_06_05_201049) do
     t.string "comment"
     t.integer "user_id"
     t.integer "product_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "rating"
-    t.string "comment"
-    t.integer "user_id"
-    t.integer "product_id"
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

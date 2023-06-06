@@ -1,43 +1,106 @@
-puts ":seedling: Seeding data..."
-
-# Create products
-product_data = [
-  { name: "Product 1", description: "Description 1", price: 10, image_url: "image1.jpg" },
-  { name: "Product 2", description: "Description 2", price: 20, image_url: "image2.jpg" },
-  { name: "Product 3", description: "Description 3", price: 15, image_url: "image3.jpg" },
-  { name: "Product 4", description: "Description 4", price: 25, image_url: "image4.jpg" },
-  { name: "Product 5", description: "Description 5", price: 12, image_url: "image5.jpg" }
-]
-
-product_data.each do |product_params|
-  Product.create(product_params)
-end
+puts "🌱 Seeding data..."
 
 # Create users
-user_data = [
-  { rating: 5, comment: "User 1 comment", user_id: 1, product_id: 1 },
-  { rating: 4, comment: "User 2 comment", user_id: 2, product_id: 2 },
-  { rating: 3, comment: "User 3 comment", user_id: 3, product_id: 3 },
-  { rating: 2, comment: "User 4 comment", user_id: 4, product_id: 4 },
-  { rating: 1, comment: "User 5 comment", user_id: 5, product_id: 5 }
-]
+User.create(
+  username: "user1",
+  email: "user1@example.com",
+  password_digest: "password_digest"
+)
 
-user_data.each do |user_params|
-  User.create(user_params)
-end
+User.create(
+  username: "user2",
+  email: "user2@example.com",
+  password_digest: "password_digest"
+)
+
+User.create(
+  username: "user3",
+  email: "user3@example.com",
+  password_digest: "password_digest"
+)
+
+User.create(
+  username: "user4",
+  email: "user4@example.com",
+  password_digest: "password_digest"
+)
+
+User.create(
+  username: "user5",
+  email: "user5@example.com",
+  password_digest: "password_digest"
+)
+
+# Create products
+Product.create(
+  name: "Product 1",
+  description: "Description 1",
+  price: 10,
+  image_url: "image1.jpg"
+)
+
+Product.create(
+  name: "Product 2",
+  description: "Description 2",
+  price: 20,
+  image_url: "image2.jpg"
+)
+
+Product.create(
+  name: "Product 3",
+  description: "Description 3",
+  price: 30,
+  image_url: "image3.jpg"
+)
+
+Product.create(
+  name: "Product 4",
+  description: "Description 4",
+  price: 40,
+  image_url: "image4.jpg"
+)
+
+Product.create(
+  name: "Product 5",
+  description: "Description 5",
+  price: 50,
+  image_url: "image5.jpg"
+)
 
 # Create reviews
-review_data = [
-  { rating: 4, comment: "Review 1 comment", user_id: 1, product_id: 1 },
-  { rating: 5, comment: "Review 2 comment", user_id: 2, product_id: 2 },
-  { rating: 3, comment: "Review 3 comment", user_id: 3, product_id: 3 },
-  { rating: 2, comment: "Review 4 comment", user_id: 4, product_id: 4 },
-  { rating: 1, comment: "Review 5 comment", user_id: 5, product_id: 5 },
-  { rating: 4, comment: "Review 6 comment", user_id: 1, product_id: 2 }
-]
+Review.create(
+  rating: 4,
+  comment: "Review 1 comment",
+  user_id: User.first.id,
+  product_id: Product.first.id
+)
 
-review_data.each do |review_params|
-  Review.create(review_params)
-end
+Review.create(
+  rating: 5,
+  comment: "Review 2 comment",
+  user_id: User.second.id,
+  product_id: Product.second.id
+)
 
-puts ":white_check_mark: Done seeding!"
+Review.create(
+  rating: 3,
+  comment: "Review 3 comment",
+  user_id: User.third.id,
+  product_id: Product.third.id
+)
+
+Review.create(
+  rating: 4,
+  comment: "Review 4 comment",
+  user_id: User.fourth.id,
+  product_id: Product.fourth.id
+)
+
+Review.create(
+  rating: 5,
+  comment: "Review 5 comment",
+  user_id: User.fifth.id,
+  product_id: Product.fifth.id
+)
+
+puts "✅ Done seeding!"
