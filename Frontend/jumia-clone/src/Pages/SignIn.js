@@ -74,16 +74,16 @@ const SignIn = () => {
                                     aria-hidden="true"
                                 />
                                 &nbsp;Loading...
-                            </> : 'Sign in'
+                            </> : 'Log in'
                         }
                         </Button>
                         <Form.Group className="mt-3 text-center">
                             <Form.Text className="text-muted fw-bold">
-                                New to E-cart?
+                                New to Alimama?
                             </Form.Text>
                             <Row className="py-2 border-bottom mb-3"/>
                             <Link to='/register' className="btn btn-info rounded-0">
-                                Create your E-cart account 
+                                Create your Alimama account 
                             </Link>
                         </Form.Group>
                     </Form>

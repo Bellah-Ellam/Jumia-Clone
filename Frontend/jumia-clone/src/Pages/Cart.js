@@ -17,7 +17,7 @@ const Cart = () => {
     return (
         <Container className="py-4 mt-5">
             <h1 className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
-                {isEmpty? 'Your Cart is Empty' : 'The Cart'}
+                {isEmpty? 'Your Cart is Empty' : 'Your Cart'}
             </h1>
             <Row className="justify-content-center">
                 <Table responsive="sm" striped bordered hover variant={theme? 'dark': 'light'} className="mb-5">
@@ -38,7 +38,7 @@ const Cart = () => {
                                             {item.title}
                                         </h6>
                                     </td>
-                                    <td>Rs. {item.price}</td>
+                                    <td>Kes. {item.price}</td>
                                     <td>Quantity ({item.quantity})</td>
                                     <td>
                                         <Button onClick={()=> updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
@@ -56,7 +56,7 @@ const Cart = () => {
                         className={`${theme? 'bg-light-black text-light' : 'bg-light text-balck'} justify-content-center w-100`}
                     >
                         <Col className="py-2">
-                            <h4>Total Price: Rs. {cartTotal}</h4>
+                            <h4>Total Price: Kes. {cartTotal}</h4>
                         </Col>
                         <Col className="p-0" md={4}>
                             <Button variant="danger"
@@ -70,7 +70,7 @@ const Cart = () => {
                                 className="m-2"
                             >
                                 <BsCartCheck size="1.7rem" />
-                                Clear Cart
+                                Checkout
                             </Button>
                         </Col>
                     </Row>}
