@@ -39,24 +39,25 @@ const Header = () => {
               <Link to="sign-in" className={`nav-link ${darkMode? 'text-dark-primary' : 'text-light-primary'}`}>
                 Sign in
               </Link>
-              <Nav.Link 
-                className={darkMode? 'text-dark-primary': 'text-light-primary'}
-                onClick={()=>setDarkMode(!darkMode)}
-              >
-                {darkMode? <BiSun size="1.7rem" />: <BiMoon size="1.7rem" />}
-              </Nav.Link>
+              
               <Link
                 to="/cart"
-                className={`${darkMode? 'text-dark-primary': 'text-light-primary'} d-flex align-items-center`}
+                className={`${darkMode? 'text-dark-primary': 'text-light-primary'} d-flex align-items-center ms-2`}
               >
                 <BiCart size="2rem"/>
                 {!isEmpty && <span style={{ position: 'relative', left: '-21px', top: '-18px'}}>{totalItems}</span>}
                 <span style={{ marginLeft: !isEmpty ? '-13px': 0}}>&nbsp;Cart</span>
               </Link>
-              <Link to="my-account" className={`nav-link ${darkMode? 'text-dark-primary': 'text-light-primary'}`}>
+              <Link to="my-account" className={`nav-link ${darkMode? 'text-dark-primary': 'text-light-primary'}  ms-2`}>
                   <VscAccount size="1.8rem"/>
                   &nbsp;My Account
               </Link>
+              <Nav.Link 
+                className={darkMode? 'text-dark-primary': 'text-light-primary  ms-2'}
+                onClick={()=>setDarkMode(!darkMode)}
+              >
+                {darkMode? <BiSun size="1.7rem" />: <BiMoon size="1.7rem" />}
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
