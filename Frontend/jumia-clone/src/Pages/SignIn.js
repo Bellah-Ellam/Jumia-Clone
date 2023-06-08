@@ -22,7 +22,7 @@ const SignIn = () => {
         
         if (email && password) {
             setLoading(true);
-            fetch('http://127.0.0.1:9292/login', {
+            fetch('https://alimama.onrender.com/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

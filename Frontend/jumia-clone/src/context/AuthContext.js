@@ -11,7 +11,7 @@ export function AuthProvider({ children }) {
 
   // Login
   const login = (email, password) => {
-    fetch("http://127.0.0.1:9292/login", {
+    fetch("https://alimama.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
   };
   // Logout
   const logout = () => {
-    fetch("http://127.0.0.1:9292/logout", {
+    fetch("https://alimama.onrender.com/logout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     })
@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
 
   // Fetch current user
   useEffect(() => {
-    fetch("http://127.0.0.1:9292/current_user", {
+    fetch("https://alimama.onrender.com/current_user", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })

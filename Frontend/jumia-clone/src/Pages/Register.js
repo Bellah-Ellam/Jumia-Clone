@@ -24,7 +24,7 @@ const Register = () => {
       setLoading(true);
   
       try {
-        const response = await fetch('http://127.0.0.1:9292/users/add_user', {
+        const response = await fetch('https://alimama.onrender.com/users/add_user', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ export function ProductProvider({ children }) {
   // Fetch products
   
   useEffect(() => {
-    fetch("http://127.0.0.1:9292/products", {
+    fetch("https://alimama.onrender.com/products", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
@@ -28,7 +28,7 @@ export function ProductProvider({ children }) {
 
   // Fetch destination by ID
   const fetchProductsId = (id) => {
-    fetch(`http://127.0.0.1:9292/products/${id}`, {
+    fetch(`https://alimama.onrender.com/products/${id}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })

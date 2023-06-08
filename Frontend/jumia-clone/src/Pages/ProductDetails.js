@@ -17,7 +17,7 @@ const ProductDetails = (props) => {
     },[]);
 
     const getResponse = async()=>{
-        const res = await fetch(`http://127.0.0.1:9292/products/${props.productId}`)
+        const res = await fetch(`https://alimama.onrender.com/products/${props.productId}`)
                           .then(res=> res.json());
                           setProductData(await res);
     }
