@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/css/main.3c70d3bf.css",
+    "main.js": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/js/main.bb90db42.js",
+    "static/js/787.893b5488.chunk.js": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/js/787.893b5488.chunk.js",
+    "static/media/profile-picture.png": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/media/profile-picture.2fda6558cd58b877e14f.png",
+    "index.html": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/index.html",
+    "main.3c70d3bf.css.map": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/css/main.3c70d3bf.css.map",
+    "main.bb90db42.js.map": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/js/main.bb90db42.js.map",
+    "787.893b5488.chunk.js.map": "/Bellah-Ellam/Jumia-Clone/tree/main/Frontend/static/js/787.893b5488.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c70d3bf.css",
+    "static/js/main.bb90db42.js"
+  ]
+}
