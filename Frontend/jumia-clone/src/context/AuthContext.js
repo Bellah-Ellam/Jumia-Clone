@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@reach/router";
 import Swal from "sweetalert2";
 
 export const AuthContext = createContext();
@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const nav = useNavigate();
   const [onChange, setonChange] = useState(false);
-  const [current_user, set_currentUser] = useState();
+  const [current_user, set_currentUser] = useState(null);
 
   // Login
   const login = (email, password) => {

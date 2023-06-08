@@ -50,9 +50,9 @@ class UserController < ApplicationController
         end
     end
 
-    patch '/wishlist_destination/:id' do
+    patch '/current_user/:id' do
     end
 
-    delete '/wishlist_destination/:id' do
+    delete '/current_user/:id' do
     end
 end

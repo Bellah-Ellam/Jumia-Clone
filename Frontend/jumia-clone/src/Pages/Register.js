@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from '@reach/router';
 import { Container, Row, Col, Button, Form, Spinner, InputGroup } from 'react-bootstrap';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 // import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/high-res.css';
+// import 'react-phone-input-2/lib/high-res.css';
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
 //   const [number, setNumber] = useState(null);
   const [theme] = useThemeHook();
+  const nav = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,6 +42,7 @@ const Register = () => {
         if (response.ok) {
           console.log('User added successfully');
           // Perform any necessary actions after successful user addition
+          nav("sign-in");
         } else {
           console.log('Failed to add user');
           // Handle the error case, display a message, or take appropriate actions

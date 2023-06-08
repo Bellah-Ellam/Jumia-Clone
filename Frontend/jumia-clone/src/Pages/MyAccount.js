@@ -51,6 +51,9 @@ const MyAccount = () => {
                                     Wallet
                                     <GiWallet size="1.4rem" />
                                 </Nav.Link>
+                                <Nav.Link eventKey='logout' path="/">
+                                    Logout
+                                </Nav.Link>
                             </Nav.Item>
                         </Nav>
                      </Col>
@@ -82,6 +85,7 @@ const MyAccount = () => {
                             <Tab.Pane eventKey="wallet">
                                 <Heading heading="Wallet" size="h3" />
                             </Tab.Pane>
+                            
                         </Tab.Content>
                      </Col>
                 </Row>

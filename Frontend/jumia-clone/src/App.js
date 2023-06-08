@@ -21,6 +21,7 @@ function App() {
   const [theme] = useThemeHook();
   return (
     <main className={theme? 'bg-black': 'bg-light-2'} style={{ height: '100vh', overflowY: 'auto'}}>
+      
       <Header/>
       <Router>
         <Home path="/" />

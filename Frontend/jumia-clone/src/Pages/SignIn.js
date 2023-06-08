@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Spinner, InputGroup } from 'react-bootstrap';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 import { Link, useNavigate } from "@reach/router";
+import swal from 'sweetalert2';
 
 //icons
 import { AiOutlineUser } from 'react-icons/ai';
@@ -31,26 +32,36 @@ const SignIn = () => {
                     password: password
                 })
             })
-                .then(res => {
-                    if (res.status === 400) {
-                        throw new Error('Missing email or password');
-                    }
-                    return res.json();
-                })
-                .then(data => {
-                    sessionStorage.setItem('token', data.token);
-                    setLoading(false);
+            .then((res) => {
+                if (res.status === 400) {
+                  throw new Error('Missing email or password');
+                }
+                return res.json();
+              })
+              .then((data) => {
+                console.log('Login response', data);
+                if (data.error) {
+                  swal.fire({
+                    icon: 'error',
+                    title: 'Invalid username or email',
+                  });
+                } else if (data.success) {
+                  swal.fire({
+                    icon: 'success',
+                    title: 'Logged in successfully',
+                  }).then(() => {
                     navigate('/', { replace: true });
-                    alert(setMessage(data.success));
-                })
-                .catch(error => {
-                    setLoading(false);
-                    console.error(error);
-                    alert('An error occurred while logging in');
+                  });
+                }
+              })
+              .catch((error) => {
+                console.error('Login error', error);
+                swal.fire({
+                  icon: 'error',
+                  title: 'An error occurred during login',
                 });
-
-
-        }
+              });
+          };
     }
     return (
         <Container className="py-5 mt-5">
