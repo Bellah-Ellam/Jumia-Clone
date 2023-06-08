@@ -17,3 +17,5 @@ use SessionController
 use UserController
 use ReviewController
 use ProductController
+use CartController
+use CartItemController

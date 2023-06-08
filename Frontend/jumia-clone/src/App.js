@@ -3,7 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useThemeHook } from './GlobalComponents/ThemeProvider';
 import Header from './components/Header';
-import { Router } from "@reach/router";
+import { Router} from "@reach/router";
+import Footer from "./components/Footer";
+
 
 //Pages
 import Home from './Pages/Home';
@@ -12,6 +14,7 @@ import ProductDetails from "./Pages/ProductDetails";
 import SignIn from "./Pages/SignIn";
 import Register from "./Pages/Register";
 import MyAccount from "./Pages/MyAccount";
+
 
 
 function App() {
@@ -27,6 +30,7 @@ function App() {
         <ProductDetails path="product-details/:productId"/>
         <Cart path="/cart" />
       </Router>
+      <Footer />
     </main>
   );
 }

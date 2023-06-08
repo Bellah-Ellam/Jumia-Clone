@@ -29,7 +29,7 @@ const Cart = () => {
                                         <div style={{ background: 'white', height: '8rem', overflow: 'hidden', display: 'flex',
                                         justifyContent: 'center', alignItems: 'center' }}>
                                             <div style={{ padding: '.5rem'}}>
-                                                <img src={item.image} style={{ width: '4rem'}} alt={item.title} />
+                                                <img src={item.image_url} style={{ width: '4rem'}} alt={item.title} />
                                             </div>
                                         </div>
                                     </td>
